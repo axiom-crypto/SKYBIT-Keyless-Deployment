@@ -66,6 +66,14 @@ const additionalNetworks = { // See https://github.com/wagmi-dev/viem/blob/main/
       browserURL: `https://testnet.bobascan.com`
     }
   },
+
+  baseSepolia: {
+    chainId: 84532,
+    urls: {
+      apiURL: `https://api-sepolia.basescan.org/api`,
+      browserURL: `https://sepolia.basescan.org`
+    }
+  }
 }
 
 const hardhatVerifyBuiltinChains = [`mainnet`, `goerli`, `optimisticEthereum`, `bsc`, `sokol`, `bscTestnet`, `xdai`, `gnosis`, `heco`, `polygon`, `opera`, `hecoTestnet`, `optimisticGoerli`, `moonbeam`, `moonriver`, `moonbaseAlpha`, `ftmTestnet`, `base`, `chiado`, `arbitrumOne`, `avalancheFujiTestnet`, `avalanche`, `polygonMumbai`, `baseGoerli`, `arbitrumTestnet`, `arbitrumGoerli`, `sepolia`, `aurora`, `auroraTestnet`, `harmony`, `harmonyTest`] // https://github.com/NomicFoundation/hardhat/blob/main/packages/hardhat-verify/src/internal/chain-config.ts
@@ -125,6 +133,7 @@ networks.bscTestnet.url = `https://data-seed-prebsc-2-s2.bnbchain.org:8545`
 
 networks.sepolia.url = `https://eth-sepolia.g.alchemy.com/v2/${process.env.ALCHEMY_API_KEY}`
 
+networks.baseSepolia.url = process.env.BASE_SEPOLIA_RPC_URL;
 // networks.chiado.url = `https://endpoints.omniatech.io/v1/gnosis/chiado/public`
 
 
@@ -136,14 +145,14 @@ module.exports = {
   solidity: { // changing these values changes bytecode, so can affect deployment address if not using CREATE3
     compilers: [
       {
-        version: `0.8.24`,
+        version: `0.8.19`,
         settings: {
           optimizer: {
             enabled: true,
             runs: 15000
           },
-          evmVersion: `shanghai`, // downgrade to `paris` if you encounter 'invalid opcode' error
-          // evmVersion: `paris`,
+          // evmVersion: `shanghai`, // downgrade to `paris` if you encounter 'invalid opcode' error
+          evmVersion: `paris`,
         }
       },
     ],
@@ -162,6 +171,8 @@ module.exports = {
       bscTestnet: process.env.BSCSCAN_API_KEY,
       avalanche: process.env.SNOWTRACE_API_KEY,
       avalancheFujiTestnet: process.env.SNOWTRACE_API_KEY,
+      base: process.env.BASESCAN_API_KEY,
+      baseSepolia: process.env.BASESCAN_API_KEY,
     },
     customChains,
     timeout: 60000 // 1min (default is 20s)
