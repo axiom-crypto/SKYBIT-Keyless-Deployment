@@ -1226,16 +1226,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@skybit/hardhat-yul@npm:^4.1.0":
-  version: 4.1.0
-  resolution: "@skybit/hardhat-yul@npm:4.1.0"
+"@skybit/hardhat-yul@npm:^4.2.0":
+  version: 4.2.0
+  resolution: "@skybit/hardhat-yul@npm:4.2.0"
   dependencies:
     "@types/glob": "npm:^8.1.0"
     glob: "npm:^10.3.10"
-    solc: "npm:^0.8.24"
-    typescript: "npm:~5.3.3"
+    typescript: "npm:~5.4.3"
     yulp: "npm:^0.2.3"
-  checksum: 10/f6ec979f8847bb5634d311a2694776a78751956fac0e0593355b2aaa8e51631f7108747ffdeff2dcedb2e334a456a9320731ee5138290971973ee6ae7b204e74
+  peerDependencies:
+    solc: "*"
+  checksum: 10/b0726d81b40b6054a5b6ee8527661bd0489df6b5013da43e8b8313c9f38d7c5207fcd7d33fc4e240354a92258f0fc16d0a9e072488595c2ba8aa018444603524
   languageName: node
   linkType: hard
 
@@ -1498,7 +1499,7 @@ __metadata:
     "@openzeppelin/contracts": "npm:4.8.3"
     "@openzeppelin/contracts-upgradeable": "npm:4.8.3"
     "@openzeppelin/hardhat-upgrades": "npm:^3.0.4"
-    "@skybit/hardhat-yul": "npm:^4.1.0"
+    "@skybit/hardhat-yul": "npm:^4.2.0"
     "@thundernetworkrad/readline-sync": "npm:^2023.3.13-1"
     "@typechain/ethers-v6": "npm:^0.5.1"
     "@typechain/hardhat": "npm:^9.1.0"
@@ -1509,6 +1510,7 @@ __metadata:
     ethers: "npm:^6.11.1"
     hardhat: "npm:^2.21.0"
     hardhat-gas-reporter: "npm:^1.0.10"
+    solc: "npm:0.8.19"
     solidity-coverage: "npm:^0.8.10"
     typechain: "npm:^8.3.2"
   languageName: unknown
@@ -7005,9 +7007,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"solc@npm:^0.8.24":
-  version: 0.8.24
-  resolution: "solc@npm:0.8.24"
+"solc@npm:0.8.19":
+  version: 0.8.19
+  resolution: "solc@npm:0.8.19"
   dependencies:
     command-exists: "npm:^1.2.8"
     commander: "npm:^8.1.0"
@@ -7018,7 +7020,7 @@ __metadata:
     tmp: "npm:0.0.33"
   bin:
     solcjs: solc.js
-  checksum: 10/e85644370a26a92fbdfb783ce14184fb6291ddd77ff93cc5d70019add63c32ecea9988453d02b27b99cb37f46cc99b88f33321305b3f9a5cacb9b1a6f803b607
+  checksum: 10/3ca32f376eddd5792c5cd1a6739ddd26235aeab1a6d916fa65f1f225c629641d7e7b615abd0754255faf9ea8c94f9cd5d87a5277523971be7dc2b918088f8ba6
   languageName: node
   linkType: hard
 
@@ -7715,23 +7717,23 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript@npm:~5.3.3":
-  version: 5.3.3
-  resolution: "typescript@npm:5.3.3"
+"typescript@npm:~5.4.3":
+  version: 5.4.3
+  resolution: "typescript@npm:5.4.3"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
-  checksum: 10/6e4e6a14a50c222b3d14d4ea2f729e79f972fa536ac1522b91202a9a65af3605c2928c4a790a4a50aa13694d461c479ba92cedaeb1e7b190aadaa4e4b96b8e18
+  checksum: 10/de4c69f49a7ad4b1ea66a6dcc8b055ac34eb56af059a069d8988dd811c5e649be07e042e5bf573e8d0ac3ec2f30e6c999aa651cd09f6e9cbc6113749e8b6be20
   languageName: node
   linkType: hard
 
-"typescript@patch:typescript@npm%3A~5.3.3#optional!builtin<compat/typescript>":
-  version: 5.3.3
-  resolution: "typescript@patch:typescript@npm%3A5.3.3#optional!builtin<compat/typescript>::version=5.3.3&hash=e012d7"
+"typescript@patch:typescript@npm%3A~5.4.3#optional!builtin<compat/typescript>":
+  version: 5.4.3
+  resolution: "typescript@patch:typescript@npm%3A5.4.3#optional!builtin<compat/typescript>::version=5.4.3&hash=5adc0c"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
-  checksum: 10/c93786fcc9a70718ba1e3819bab56064ead5817004d1b8186f8ca66165f3a2d0100fee91fa64c840dcd45f994ca5d615d8e1f566d39a7470fc1e014dbb4cf15d
+  checksum: 10/5aedd97595582b08aadb8a70e8e3ddebaf5a9c1e5ad4d6503c2fcfc15329b5cf8d01145b09913e9555683ac16c5123a96be32b6d72614098ebd42df520eed9b1
   languageName: node
   linkType: hard
 

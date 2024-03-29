@@ -16,7 +16,7 @@
     "@openzeppelin/contracts": "4.8.3",
     "@openzeppelin/contracts-upgradeable": "4.8.3",
     "@openzeppelin/hardhat-upgrades": "^3.0.4",
-    "@skybit/hardhat-yul": "^4.1.0",
+    "@skybit/hardhat-yul": "^4.2.0",
     "@thundernetworkrad/readline-sync": "^2023.3.13-1",
     "@typechain/ethers-v6": "^0.5.1",
     "@typechain/hardhat": "^9.1.0",
@@ -27,6 +27,7 @@
     "ethers": "^6.11.1",
     "hardhat": "^2.21.0",
     "hardhat-gas-reporter": "^1.0.10",
+    "solc": "0.8.19",
     "solidity-coverage": "^0.8.10",
     "typechain": "^8.3.2"
   }
