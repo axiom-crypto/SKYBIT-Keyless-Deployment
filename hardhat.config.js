@@ -6,8 +6,8 @@ require(`@skybit/hardhat-yul`)
 BigInt.prototype[`toJSON`] = () => this.toString() // To prevent TypeError: Do not know how to serialize a BigInt
 
 // SET YOUR ACCOUNT HERE
-// const accounts = { mnemonic: process.env.MNEMONIC || `test test test test test test test test test test test junk` }
-const accounts = [process.env.PRIVATE_KEY0]
+const accounts = { mnemonic: process.env.MNEMONIC || `test test test test test test test test test test test junk` }
+// const accounts = [process.env.PRIVATE_KEY0]
 // const accounts = [process.env.PRIVATE_KEY1, process.env.PRIVATE_KEY2]
 
 // You can add more blockchains to this list if they don't already exist in @wagmi/chains
@@ -69,6 +69,10 @@ const additionalNetworks = { // See https://github.com/wagmi-dev/viem/blob/main/
 
   baseSepolia: {
     chainId: 84532,
+    url: `https://sepolia.base.org`,
+    accounts,
+
+    network: `baseSepolia`,
     urls: {
       apiURL: `https://api-sepolia.basescan.org/api`,
       browserURL: `https://sepolia.basescan.org`
@@ -131,9 +135,10 @@ networks.polygonMumbai.url = `https://polygon-mumbai.blockpi.network/v1/rpc/publ
 
 networks.bscTestnet.url = `https://data-seed-prebsc-2-s2.bnbchain.org:8545`
 
-networks.sepolia.url = `https://eth-sepolia.g.alchemy.com/v2/${process.env.ALCHEMY_API_KEY}`
+// Alchemy does not allow chainId: 0 in txData: https://docs.alchemy.com/changelog/08252022-removed-support-for-unprotected-transactions
+networks.sepolia.url = `https://sepolia.gateway.tenderly.co	`;
 
-networks.baseSepolia.url = process.env.BASE_SEPOLIA_RPC_URL;
+// networks.baseSepolia.url = `https://base-sepolia.g.alchemy.com/v2/${process.env.ALCHEMY_API_KEY}`
 // networks.chiado.url = `https://endpoints.omniatech.io/v1/gnosis/chiado/public`
 
 
